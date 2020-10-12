@@ -1,0 +1,3 @@
+/home/dimasiandro/Downloads/acs-spring-l2/CMakeFiles/rebuild_cache.dir
+/home/dimasiandro/Downloads/acs-spring-l2/CMakeFiles/riscv_sim.dir
+/home/dimasiandro/Downloads/acs-spring-l2/CMakeFiles/edit_cache.dir

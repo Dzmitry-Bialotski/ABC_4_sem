@@ -1,0 +1,24 @@
+--- a/src/Decoder.h	2020-03-12 21:02:01.648512940 +0300
++++ b/src/Decoder.h	2020-03-11 02:51:57.780216000 +0300
+@@ -91,6 +91,7 @@
+                 instr->_brFunc = BrFunc::AT;
+                 instr->_dst = RId(decoded.i.rd);
+                 instr->_src1 = RId(decoded.i.rs1);
++                instr->_imm = immI;
+                 break;
+             }
+             case Opcode::Branch:
+--- a/src/RegisterFile.h	2020-03-09 01:29:18.000000000 +0300
++++ b/src/RegisterFile.h	2020-03-11 02:52:47.803609000 +0300
+@@ -7,6 +7,11 @@
+ class RegisterFile
+ {
+ public:
++    RegisterFile()
++    {
++        _r.fill(0);
++    }
++
+     void Read(InstructionPtr& instr)
+     {
+         if (instr->_src1)
